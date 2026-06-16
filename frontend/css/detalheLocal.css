@@ -1,0 +1,178 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Poppins, sans-serif;
+}
+
+body {
+  background: #000;
+  color: #fff;
+}
+
+.banner {
+  height: 280px;
+
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7)),
+    url("https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1200");
+
+  background-size: cover;
+  background-position: center;
+
+  position: relative;
+}
+
+.back-btn,
+.favorite-btn {
+  position: absolute;
+  top: 20px;
+
+  width: 45px;
+  height: 45px;
+
+  border: none;
+  border-radius: 50%;
+
+  background: rgba(0, 0, 0, 0.6);
+
+  color: #fff;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-decoration: none;
+}
+
+.back-btn {
+  left: 20px;
+}
+
+.favorite-btn {
+  right: 20px;
+}
+
+.content {
+  padding: 20px;
+}
+
+.content h1 {
+  margin-bottom: 10px;
+}
+
+.rating {
+  display: flex;
+  gap: 10px;
+
+  color: #8cff2e;
+
+  margin-bottom: 10px;
+}
+
+.distance {
+  margin-bottom: 15px;
+}
+
+.team-box {
+  background: #102313;
+
+  border: 1px solid #3f7c2d;
+
+  padding: 15px;
+
+  border-radius: 12px;
+
+  margin-bottom: 20px;
+}
+
+section {
+  margin-bottom: 25px;
+}
+
+section h2 {
+  margin-bottom: 10px;
+  color: #8cff2e;
+}
+
+section p {
+  line-height: 1.6;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.tags span {
+  background: #102313;
+
+  border: 1px solid #3f7c2d;
+
+  padding: 8px 12px;
+
+  border-radius: 20px;
+}
+
+.gallery {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+}
+
+.gallery img {
+  width: 140px;
+  height: 100px;
+
+  object-fit: cover;
+
+  border-radius: 10px;
+}
+
+.review {
+  background: #111;
+
+  border-radius: 12px;
+
+  padding: 15px;
+
+  margin-bottom: 10px;
+}
+
+.buttons {
+  display: flex;
+
+  gap: 10px;
+
+  margin-top: 30px;
+}
+
+.btn-favorite,
+.btn-route {
+  flex: 1;
+
+  height: 50px;
+
+  border: none;
+
+  border-radius: 12px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+.btn-favorite {
+  background: #8cff2e;
+
+  color: #000;
+}
+
+.btn-route {
+  background: #102313;
+
+  color: #fff;
+
+  border: 1px solid #3f7c2d;
+}

@@ -259,3 +259,11 @@ body {
 
   background: #111;
 }
+.place-card {
+  text-decoration: none;
+  color: #fff;
+}
+
+.place-card:visited {
+  color: #fff;
+}
