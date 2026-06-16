@@ -1,0 +1,224 @@
+/* Importação da Fonte de acordo com o modelo */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700;900&display=swap");
+
+/* Configurações Globais unificadas */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #000;
+  color: #fff;
+}
+
+/* Configuração da página de mapa baseada na estrutura do modelo */
+.map-page {
+  min-height: 100vh;
+  background: #000;
+  color: #fff;
+  padding: 20px;
+  padding-bottom: 100px; /* CORRIGIDO: Mantido para o mapa não sumir atrás da barra */
+}
+
+/* Hero & Logo herdados do modelo original */
+.hero {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.logo {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: #fff;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero h1 {
+  margin-top: 15px;
+  font-size: 38px;
+  line-height: 1;
+  font-weight: 900;
+}
+
+.hero h1 span {
+  display: block;
+  color: #8cff2e; /* Verde limão específico do modelo */
+}
+
+.hero p {
+  color: #8cff2e;
+  margin-top: 8px;
+  font-size: 14px;
+}
+
+/* Customização Avançada do Canvas do Mapa */
+.map-canvas-container {
+  height: 480px;
+  border-radius: 15px;
+  border: 2px solid #3f7c2d;
+  position: relative;
+  overflow: hidden;
+  margin-top: 25px;
+  background: #060b08;
+  box-shadow: 0 10px 30px rgba(140, 255, 46, 0.05);
+}
+
+/* Linhas abstratas simulando blocos/ruas */
+.map-streets {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+  background-size: 25px 25px;
+  z-index: 1;
+}
+
+/* Efeito Heatmap (Mapa de Calor) dinâmico via Gradiente Radial */
+.heatmap-spots {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background:
+    radial-gradient(
+      circle at 45% 55%,
+      rgba(255, 0, 0, 0.5) 0%,
+      rgba(255, 140, 0, 0.35) 20%,
+      rgba(140, 255, 46, 0.15) 45%,
+      transparent 65%
+    ),
+    radial-gradient(
+      circle at 70% 35%,
+      rgba(255, 0, 0, 0.45) 0%,
+      rgba(255, 100, 0, 0.25) 15%,
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 30% 25%,
+      rgba(255, 0, 0, 0.4) 0%,
+      rgba(140, 255, 46, 0.1) 35%,
+      transparent 60%
+    );
+  z-index: 2;
+  opacity: 0.9;
+}
+
+/* Elementos flutuantes de ação sobre o mapa */
+.action-overlay {
+  position: absolute;
+  bottom: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  max-width: 320px;
+  z-index: 3;
+  text-align: center;
+}
+
+/* Card CTA unificado às cores padrão de componentes do modelo (#102313) */
+.cta-card {
+  background: rgba(16, 35, 19, 0.9);
+  border: 2px solid #8cff2e;
+  border-radius: 15px;
+  padding: 16px 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  backdrop-filter: blur(8px);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+
+.cta-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 15px rgba(140, 255, 46, 0.3);
+}
+
+.card-icon {
+  margin-bottom: 6px;
+  display: flex;
+  align-items: center;
+}
+
+.cta-text {
+  color: #fff;
+  font-size: 13px;
+  font-weight: 900;
+  letter-spacing: 0.5px;
+  text-align: center;
+}
+
+.tap-hint {
+  color: #fff;
+  font-size: 10px;
+  text-transform: uppercase;
+  margin-top: 10px;
+  letter-spacing: 1.5px;
+  opacity: 0.7;
+}
+
+/* Barra inferior fixa idêntica ao modelo inicial */
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #050505;
+  border-top: 1px solid #17361c;
+  display: flex;
+  justify-content: space-around;
+  padding: 12px 0;
+  z-index: 10; /* Adicionado: garante que a barra fica sempre por cima do mapa */
+}
+
+.bottom-nav a {
+  text-decoration: none;
+  color: #fff;
+  opacity: 0.5; /* ADICIONADO: Deixa os botões comuns levemente apagados */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 11px;
+  transition:
+    opacity 0.2s ease,
+    color 0.2s ease;
+}
+
+/* Tamanho aumentado dos ícones do Font Awesome */
+.bottom-nav i {
+  font-size: 22px;
+  margin-bottom: 4px;
+}
+
+/* Quando o botão estiver ativo (Mapa) */
+.bottom-nav .active {
+  color: #8cff2e; /* Acende em verde neon */
+  opacity: 1; /* Retira a transparência do botão ativo */
+}
+
+.map-placeholder {
+  height: 500px;
+  border-radius: 15px;
+  border: 2px solid #8cff2e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  background: #111;
+}

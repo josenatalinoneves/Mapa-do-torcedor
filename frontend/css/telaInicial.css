@@ -239,3 +239,23 @@ body {
 .bottom-nav .active {
   color: #8cff2e;
 }
+.map-page {
+  min-height: 100vh;
+  background: #000;
+  color: #fff;
+  padding: 20px;
+}
+
+.map-placeholder {
+  height: 500px;
+  border-radius: 15px;
+  border: 2px solid #8cff2e;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-top: 20px;
+
+  background: #111;
+}

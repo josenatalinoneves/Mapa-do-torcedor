@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mapa do Torcedor - Visualização</title>
+    <link rel="stylesheet" href="css/mapa.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="map-page">
+      <header class="hero" style="position: relative">
+        <a
+          href="telaInicial.html"
+          style="
+            position: absolute;
+            left: 10px;
+            top: 10px;
+            color: #8cff2e;
+            text-decoration: none;
+            font-size: 24px;
+          "
+        >
+          ←
+        </a>
+
+        <div class="logo">
+          <svg width="42" height="42" viewBox="0 0 24 24" fill="#111">
+            <path
+              d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 13v1c0 1.1.9 2 2 2v1.93zm6.9-2.53c-.26-.81-1-1.4-1.9-1.4h-1v-3c0-.55-.45-1-1-1h-6v-2h2c.55 0 1-.45 1-1V5h1c.82 0 1.54-.5 1.86-1.22C17.14 5.31 19 8.43 19 12c0 2.22-.81 4.26-2.1 5.4z"
+            />
+          </svg>
+        </div>
+        <h1>MAPA DO <span>TORCEDOR</span></h1>
+        <p>Seu time. Sua torcida. Seu lugar.</p>
+      </header>
+
+      <div class="map-canvas-container">
+        <div class="map-streets"></div>
+        <div class="heatmap-spots"></div>
+
+        <div class="action-overlay">
+          <div class="cta-card">
+            <div class="card-icon">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="#8cff2e"
+                stroke-width="2.5"
+              >
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+            </div>
+            <span class="cta-text">ENCONTRAR LUGARES PRÓXIMOS</span>
+          </div>
+          <p class="tap-hint">Toque para começar</p>
+        </div>
+      </div>
+
+      <nav class="bottom-nav">
+        <a href="telaInicial.html">
+          <i class="fa-solid fa-house"></i>
+          <span>Início</span>
+        </a>
+
+        <a href="mapa.html" class="active">
+          <i class="fa-solid fa-map"></i>
+          <span>Mapa</span>
+        </a>
+
+        <a href="jogos.html">
+          <i class="fa-solid fa-calendar-days"></i>
+          <span>Jogos</span>
+        </a>
+
+        <a href="favoritos.html">
+          <i class="fa-solid fa-star"></i>
+          <span>Favoritos</span>
+        </a>
+
+        <a href="perfil.html">
+          <i class="fa-solid fa-user"></i>
+          <span>Perfil</span>
+        </a>
+      </nav>
+    </div>
+  </body>
+</html>
