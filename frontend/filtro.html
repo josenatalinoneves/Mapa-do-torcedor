@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mapa do Torcedor - Filtrar Locais</title>
+
+    <link rel="stylesheet" href="css/filtro.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="filter-page">
+      <!-- TOPO DA TELA -->
+      <header class="filter-header">
+        <a href="telaInicial.html" class="back-btn">
+          <i class="fa-solid fa-arrow-left"></i>
+        </a>
+        <h2>Filtrar Locais</h2>
+        <span class="clear-text">Limpar</span>
+      </header>
+
+      <!-- FORMULÁRIO DE FILTROS -->
+      <main class="filter-container">
+        <!-- 1. FILTRO DE DISTÂNCIA -->
+        <section class="filter-group">
+          <h3>
+            <i class="fa-solid fa-location-crosshairs"></i> Distância Máxima
+          </h3>
+          <div class="slider-container">
+            <input
+              type="range"
+              min="1"
+              max="15"
+              value="5"
+              class="range-slider"
+              id="distanceRange"
+            />
+            <div class="slider-labels">
+              <span>1 km</span>
+              <span class="current-value">Até 5 km</span>
+              <span>15 km</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- 2. FILTRO DE TORCIDA (Chips Selecionáveis) -->
+        <section class="filter-group">
+          <h3>
+            <i class="fa-solid fa-shield-halved"></i> Torcida Predominante
+          </h3>
+          <div class="chips-grid">
+            <input type="checkbox" id="team-bahia" checked />
+            <label for="team-bahia">Bahia</label>
+
+            <input type="checkbox" id="team-vitoria" />
+            <label for="team-vitoria">Vitória</label>
+
+            <input type="checkbox" id="team-flamengo" />
+            <label for="team-flamengo">Flamengo</label>
+
+            <input type="checkbox" id="team-corinthians" />
+            <label for="team-corinthians">Corinthians</label>
+
+            <input type="checkbox" id="team-neutro" />
+            <label for="team-neutro">Ambiente Neutro</label>
+          </div>
+        </section>
+
+        <!-- 3. FILTRO DE TIPO DE ESTABELECIMENTO -->
+        <section class="filter-group">
+          <h3><i class="fa-solid fa-store"></i> Tipo de Local</h3>
+          <div class="chips-grid">
+            <input type="checkbox" id="type-bar" checked />
+            <label for="type-bar">Bar Tradicional</label>
+
+            <input type="checkbox" id="type-espetinho" />
+            <label for="type-espetinho">Espetinho / Pub</label>
+
+            <input type="checkbox" id="type-sede" />
+            <label for="type-sede">Sede de Torcida</label>
+
+            <input type="checkbox" id="type-restaurante" />
+            <label for="type-restaurante">Restaurante</label>
+          </div>
+        </section>
+
+        <!-- 4. FILTRO DE COMODIDADES -->
+        <section class="filter-group">
+          <h3><i class="fa-solid fa-star"></i> Comodidades Obrigatórias</h3>
+          <div class="chips-grid">
+            <input type="checkbox" id="com-tv" checked />
+            <label for="com-tv"><i class="fa-solid fa-tv"></i> Telão HD</label>
+
+            <input type="checkbox" id="com-beer" checked />
+            <label for="com-beer"
+              ><i class="fa-solid fa-beer-mug-empty"></i> Cerveja Barata</label
+            >
+
+            <input type="checkbox" id="com-wifi" />
+            <label for="com-wifi"
+              ><i class="fa-solid fa-wifi"></i> Wi-Fi Grátis</label
+            >
+
+            <input type="checkbox" id="com-ac" />
+            <label for="com-ac"
+              ><i class="fa-solid fa-snowflake"></i> Ar Condicionado</label
+            >
+
+            <input type="checkbox" id="com-parking" />
+            <label for="com-parking"
+              ><i class="fa-solid fa-car"></i> Estacionamento</label
+            >
+          </div>
+        </section>
+
+        <!-- BOTÕES DE AÇÃO INFERIORES -->
+        <div class="action-buttons">
+          <button type="button" class="btn-secondary">Limpar Tudo</button>
+          <a href="telaInicial.html" class="btn-primary">Aplicar Filtros</a>
+        </div>
+      </main>
+
+      <!-- BARRA INFERIOR FIXA PADRONIZADA -->
+      <nav class="bottom-nav">
+        <a href="telaInicial.html">
+          <i class="fa-solid fa-house"></i>
+          <span>Início</span>
+        </a>
+
+        <a href="mapa.html">
+          <i class="fa-solid fa-map"></i>
+          <span>Mapa</span>
+        </a>
+
+        <a href="jogos.html">
+          <i class="fa-solid fa-calendar-days"></i>
+          <span>Jogos</span>
+        </a>
+
+        <a href="favoritos.html">
+          <i class="fa-solid fa-star"></i>
+          <span>Favoritos</span>
+        </a>
+
+        <a href="perfil.html">
+          <i class="fa-solid fa-user"></i>
+          <span>Perfil</span>
+        </a>
+      </nav>
+    </div>
+
+    <!-- Script simples apenas para fazer o slider de distância atualizar o texto na tela -->
+    <script>
+      const slider = document.getElementById("distanceRange");
+      const output = document.querySelector(".current-value");
+      slider.oninput = function () {
+        output.innerHTML = `Até ${this.value} km`;
+      };
+    </script>
+  </body>
+</html>

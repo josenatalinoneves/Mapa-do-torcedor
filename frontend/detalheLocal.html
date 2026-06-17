@@ -3,10 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Detalhes do Local</title>
+    <title>Mapa do Torcedor - Detalhes do Local</title>
 
     <link rel="stylesheet" href="css/detalheLocal.css" />
-
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
@@ -14,106 +13,154 @@
   </head>
   <body>
     <div class="container">
+      <!-- BANNER COM FOTO DE FUNDO (Ajustado via CSS) -->
       <div class="banner">
+        <!-- Seta de voltar padronizada -->
         <a href="telaInicial.html" class="back-btn">
           <i class="fa-solid fa-arrow-left"></i>
         </a>
 
-        <button class="favorite-btn">
-          <i class="fa-regular fa-heart"></i>
+        <!-- Botão de favoritar flutuante moderno -->
+        <button class="favorite-btn" title="Favoritar local">
+          <i class="fa-regular fa-star"></i>
         </button>
       </div>
 
+      <!-- CONTEÚDO PRINCIPAL -->
       <div class="content">
         <h1>Arena Tricolor</h1>
 
         <div class="rating">
-          <span>⭐ 4.8</span>
-
-          <span>(245 avaliações)</span>
+          <span class="stars-badge"><i class="fa-solid fa-star"></i> 4.8</span>
+          <span class="reviews-count">(245 avaliações)</span>
         </div>
 
-        <div class="distance">📍 350m de você</div>
+        <div class="distance">
+          <i class="fa-solid fa-location-dot"></i> 350m de você •
+          <span class="status-open">Aberto Agora</span>
+        </div>
 
         <div class="team-box">
-          🏟️ Torcida predominante:
+          <i class="fa-solid fa-shield-halved"></i> Torcida predominante:
           <strong>Bahia</strong>
         </div>
 
-        <section>
-          <h2>📌 Endereço</h2>
+        <!-- NOVO: TRANSMISSÃO DE HOJE E PROMOÇÃO -->
+        <section class="live-broadcast">
+          <h2>
+            <i class="fa-solid fa-satellite-dish"></i> Transmissão de Hoje
+          </h2>
+          <div class="match-card">
+            <div class="match-details">
+              <span class="live-tag">Ao Vivo</span>
+              <h3>Bahia x Flamengo</h3>
+              <p>Campeonato Brasileiro • 21:30</p>
+            </div>
+            <i class="fa-solid fa-futbol neon-ball"></i>
+          </div>
+          <div class="promo-box">
+            <i class="fa-solid fa-percentage"></i>
+            <p>
+              <strong>Promoção:</strong> Cerveja em dobro até o início da
+              partida!
+            </p>
+          </div>
+        </section>
 
+        <!-- ENDEREÇO -->
+        <section class="info-section">
+          <h2>📌 Endereço</h2>
           <p>
             Av. ACM, 1200<br />
             Salvador - BA
           </p>
         </section>
 
-        <section>
+        <!-- SOBRE -->
+        <section class="info-section">
           <h2>📝 Sobre</h2>
-
           <p>
             Bar temático para torcedores do Bahia, com telões, transmissão ao
             vivo dos jogos, ambiente climatizado e cardápio exclusivo.
           </p>
         </section>
 
-        <section>
+        <!-- COMODIDADES -->
+        <section class="info-section">
           <h2>🎯 Comodidades</h2>
-
           <div class="tags">
-            <span>Telão</span>
-
-            <span>Wi-Fi</span>
-
-            <span>Estacionamento</span>
-
-            <span>Área Kids</span>
-
-            <span>Chopp</span>
+            <span><i class="fa-solid fa-tv"></i> Telão</span>
+            <span><i class="fa-solid fa-wifi"></i> Wi-Fi</span>
+            <span><i class="fa-solid fa-car"></i> Estacionamento</span>
+            <span><i class="fa-solid fa-child"></i> Área Kids</span>
+            <span><i class="fa-solid fa-beer-mug-empty"></i> Chopp</span>
           </div>
         </section>
 
-        <section>
+        <!-- GALERIA DE FOTOS -->
+        <section class="info-section">
           <h2>📷 Fotos</h2>
-
           <div class="gallery">
             <img
               src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=500"
+              alt="Interior do Bar"
             />
-
             <img
               src="https://images.unsplash.com/photo-1552566626-52f8b828add9?w=500"
+              alt="Fachada"
             />
-
             <img
               src="https://images.unsplash.com/photo-1566737236500-c8ac43014a8e?w=500"
+              alt="Bebidas"
             />
           </div>
         </section>
 
-        <section>
+        <!-- AVALIAÇÕES -->
+        <section class="info-section">
           <h2>💬 Avaliações</h2>
-
           <div class="review">
-            ⭐⭐⭐⭐⭐
-
+            <div class="review-stars">⭐⭐⭐⭐ Tirando onda</div>
             <p>Melhor lugar para assistir aos jogos do Bahia.</p>
           </div>
 
           <div class="review">
-            ⭐⭐⭐⭐⭐
-
+            <div class="review-stars">⭐⭐⭐⭐⭐ Excelente</div>
             <p>Ambiente excelente e atendimento rápido.</p>
           </div>
         </section>
 
-        <div class="buttons">
-          <button class="btn-favorite">❤️ Favoritar</button>
-
-          <button class="btn-route">📍 Como Chegar</button>
+        <!-- BOTÃO DE AÇÃO PRINCIPAL (Focado em rota) -->
+        <div class="buttons-area">
+          <a href="https://maps.google.com" target="_blank" class="btn-route">
+            <i class="fa-solid fa-route"></i> Como Chegar (Abrir Rota)
+          </a>
         </div>
       </div>
     </div>
+
+    <!-- MENU INFERIOR FIXO PADRONIZADO -->
+    <nav class="bottom-nav">
+      <a href="telaInicial.html">
+        <i class="fa-solid fa-house"></i>
+        <span>Início</span>
+      </a>
+      <a href="mapa.html">
+        <i class="fa-solid fa-map"></i>
+        <span>Mapa</span>
+      </a>
+      <a href="jogos.html">
+        <i class="fa-solid fa-calendar-days"></i>
+        <span>Jogos</span>
+      </a>
+      <a href="favoritos.html">
+        <i class="fa-solid fa-star"></i>
+        <span>Favoritos</span>
+      </a>
+      <a href="perfil.html">
+        <i class="fa-solid fa-user"></i>
+        <span>Perfil</span>
+      </a>
+    </nav>
   </body>
 </html>

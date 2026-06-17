@@ -1,0 +1,229 @@
+/* Importação da Fonte oficial do modelo */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700;900&display=swap");
+
+/* Reset Global */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #000;
+  color: #fff;
+}
+
+/* Container Principal */
+.favorites-page {
+  min-height: 100vh;
+  background: #000;
+  color: #fff;
+  padding: 20px;
+  padding-bottom: 110px; /* Garante espaço para não sumir atrás da barra inferior */
+}
+
+/* Header & Botão de Voltar */
+.hero {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.back-btn {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  color: #8cff2e;
+  text-decoration: none;
+  font-size: 22px;
+  transition: transform 0.2s;
+}
+
+.back-btn:hover {
+  transform: scale(1.1);
+}
+
+.logo {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: #fff;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero h1 {
+  margin-top: 15px;
+  font-size: 36px;
+  line-height: 1;
+  font-weight: 900;
+  letter-spacing: -1px;
+}
+
+.hero h1 span {
+  display: block;
+  color: #8cff2e;
+}
+
+.hero p {
+  color: #8cff2e;
+  margin-top: 8px;
+  font-size: 13px;
+  opacity: 0.9;
+}
+
+/* Container dos Cards */
+.favorites-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+/* Layout do Card de Favoritos (Inspirado no modelo de componentes cta-card) */
+.favorite-card {
+  background: rgba(16, 35, 19, 0.6);
+  border: 1px solid #17361c;
+  border-radius: 15px;
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  transition:
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.favorite-card:hover {
+  border-color: #8cff2e;
+  transform: translateY(-2px);
+}
+
+/* Alinhamento interno do card */
+.card-info {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+/* Área circular do ícone do local */
+.card-icon-area {
+  width: 50px;
+  height: 50px;
+  background: #111;
+  border: 1px solid #17361c;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #8cff2e;
+  font-size: 20px;
+}
+
+/* Textos do Card */
+.card-text h3 {
+  font-size: 15px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 2px;
+}
+
+.card-text p {
+  font-size: 11px;
+  color: #ccc;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-bottom: 6px;
+}
+
+.card-text p i {
+  color: #8cff2e;
+}
+
+/* Badge/Etiqueta de Categoria */
+.category {
+  background: #111;
+  color: #8cff2e;
+  font-size: 9px;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 3px 8px;
+  border-radius: 20px;
+  border: 1px solid rgba(140, 255, 46, 0.2);
+}
+
+/* Status: Aberto / Fechado */
+.card-status {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  font-size: 10px;
+  font-weight: 700;
+  color: #8cff2e; /* Aberto/Ativo fica verde */
+  text-transform: uppercase;
+}
+
+.card-status.closed {
+  color: #ff3b3b; /* Fechado fica vermelho */
+}
+
+/* Botão da Estrela de Favorito (Ativa) */
+.remove-favorite-btn {
+  background: none;
+  border: none;
+  color: #8cff2e; /* Estrela preenchida e acesa em verde */
+  font-size: 20px;
+  cursor: pointer;
+  align-self: flex-end;
+  margin-bottom: -4px;
+  transition: transform 0.2s ease;
+}
+
+.remove-favorite-btn:hover {
+  transform: scale(1.2);
+}
+
+/* BARRA INFERIOR FIXA (Mantendo seu padrão idêntico de ícones ampliados) */
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #050505;
+  border-top: 1px solid #17361c;
+  display: flex;
+  justify-content: space-around;
+  padding: 12px 0;
+  z-index: 10;
+}
+
+.bottom-nav a {
+  text-decoration: none;
+  color: #fff;
+  opacity: 0.5; /* Botões inativos ficam levemente apagados */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 11px;
+  transition:
+    opacity 0.2s ease,
+    color 0.2s ease;
+}
+
+/* Configuração dos seus ícones grandes (30px) */
+.bottom-nav i {
+  font-size: 30px;
+  margin-bottom: 6px;
+}
+
+/* Quando o botão estiver ativo (Nesta tela, o Favoritos) */
+.bottom-nav .active {
+  color: #8cff2e; /* Acende o texto em verde neon */
+  opacity: 1; /* Tira a opacidade deixando o ícone 100% aceso */
+}

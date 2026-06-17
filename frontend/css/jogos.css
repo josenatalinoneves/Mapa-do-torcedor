@@ -1,0 +1,280 @@
+/* Importação da Fonte oficial do modelo */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700;900&display=swap");
+
+/* Reset Global */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #000;
+  color: #fff;
+}
+
+/* Container Principal */
+.games-page {
+  min-height: 100vh;
+  background: #000;
+  padding: 20px;
+  padding-bottom: 110px; /* Evita que o último card suma atrás da barra inferior */
+}
+
+/* Header & Botão de Voltar */
+.hero {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.back-btn {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  color: #8cff2e;
+  text-decoration: none;
+  font-size: 22px;
+  transition: transform 0.2s;
+}
+
+.back-btn:hover {
+  transform: scale(1.1);
+}
+
+.logo {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: #fff;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero h1 {
+  margin-top: 15px;
+  font-size: 36px;
+  line-height: 1;
+  font-weight: 900;
+  letter-spacing: -1px;
+}
+
+.hero h1 span {
+  display: block;
+  color: #8cff2e;
+}
+
+.hero p {
+  color: #8cff2e;
+  margin-top: 8px;
+  font-size: 13px;
+  opacity: 0.9;
+}
+
+/* Container da Lista de Jogos */
+.games-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+/* Layout do Card de Jogo */
+.game-card {
+  background: rgba(16, 35, 19, 0.4);
+  border: 1px solid #17361c;
+  border-radius: 15px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  transition:
+    border-color 0.2s,
+    transform 0.2s;
+}
+
+.game-card:hover {
+  border-color: rgba(140, 255, 46, 0.5);
+  transform: translateY(-2px);
+}
+
+/* Borda neon especial para jogo que acontece hoje */
+.live-border {
+  border-color: #8cff2e;
+  background: rgba(16, 35, 19, 0.6);
+}
+
+/* Topo do Card (Campeonato e Data) */
+.game-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(23, 54, 28, 0.6);
+  padding-bottom: 8px;
+}
+
+.tournament {
+  font-size: 11px;
+  font-weight: 700;
+  color: #aaa;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.game-date {
+  font-size: 11px;
+  color: #fff;
+  font-weight: 500;
+}
+
+/* Tag piscante/viva para o jogo de hoje */
+.live-tag {
+  color: #000;
+  background: #8cff2e;
+  font-weight: 900;
+  padding: 2px 8px;
+  border-radius: 4px;
+  text-transform: uppercase;
+  font-size: 10px;
+}
+
+/* Confronto (Times e Versus) */
+.matchup {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0;
+}
+
+.team {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  flex: 1;
+}
+
+.team-icon {
+  font-size: 32px;
+  color: #8cff2e; /* Seu time ganha o escudo verde neon */
+}
+
+.team-icon.opponent {
+  color: #555; /* O time adversário ganha um escudo neutro escuro */
+}
+
+.team h3 {
+  font-size: 14px;
+  font-weight: 900;
+  letter-spacing: 0.5px;
+  text-align: center;
+}
+
+.vs {
+  font-size: 14px;
+  font-weight: 900;
+  color: #8cff2e;
+  background: #111;
+  border: 1px solid #17361c;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Rodapé do Card (Estádio e Botão) */
+.game-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  margin-top: 4px;
+}
+
+.location {
+  font-size: 11px;
+  color: #ccc;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  max-width: 60%;
+}
+
+.location i {
+  color: #8cff2e;
+}
+
+/* Botão de Ação dentro do Card */
+.game-action-btn {
+  text-decoration: none;
+  font-size: 11px;
+  font-weight: 900;
+  text-transform: uppercase;
+  padding: 8px 14px;
+  border-radius: 8px;
+  text-align: center;
+  transition:
+    background 0.2s,
+    transform 0.2s;
+
+  background: #8cff2e;
+  color: #000;
+}
+
+.game-action-btn.secondary {
+  background: #111;
+  color: #8cff2e;
+  border: 1px solid #17361c;
+}
+
+.game-action-btn:hover {
+  transform: scale(1.03);
+}
+
+.game-action-btn.secondary:hover {
+  border-color: #8cff2e;
+}
+
+/* BARRA INFERIOR FIXA (Mantendo seu padrão exato de 30px) */
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #050505;
+  border-top: 1px solid #17361c;
+  display: flex;
+  justify-content: space-around;
+  padding: 12px 0;
+  z-index: 10;
+}
+
+.bottom-nav a {
+  text-decoration: none;
+  color: #fff;
+  opacity: 0.5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 11px;
+  transition:
+    opacity 0.2s ease,
+    color 0.2s ease;
+}
+
+.bottom-nav i {
+  font-size: 30px;
+  margin-bottom: 6px;
+}
+
+/* Quando o botão estiver ativo (Nesta tela, o Jogos) */
+.bottom-nav .active {
+  color: #8cff2e;
+  opacity: 1;
+}

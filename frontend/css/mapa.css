@@ -222,3 +222,21 @@ body {
   margin-top: 20px;
   background: #111;
 }
+/* ======================================================== */
+/* PADRONIZAÇÃO DA SETA DE VOLTAR                           */
+/* ======================================================== */
+.back-btn {
+  position: absolute; /* Fixa a seta no topo esquerdo do header */
+  left: 15px;
+  top: 15px;
+  color: #8cff2e; /* Cor verde neon padronizada */
+  text-decoration: none;
+  font-size: 22px; /* Tamanho ideal para clicar no celular */
+  transition: transform 0.2s ease;
+  z-index: 10; /* Garante que ela fique por cima de tudo */
+}
+
+/* Efeito sutil de clique/hover */
+.back-btn:hover {
+  transform: scale(1.1);
+}

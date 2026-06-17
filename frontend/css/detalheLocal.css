@@ -1,8 +1,11 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+/* Reset e Configurações Gerais */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Poppins, sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 body {
@@ -10,169 +13,331 @@ body {
   color: #fff;
 }
 
-.banner {
-  height: 280px;
-
-  background:
-    linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7)),
-    url("https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1200");
-
-  background-size: cover;
-  background-position: center;
-
-  position: relative;
+.container {
+  min-height: 100vh;
+  padding-bottom: 110px; /* Garante que o conteúdo não fique escondido sob o menu */
+  max-width: 480px;
+  margin: 0 auto;
+  background: #000;
 }
 
-.back-btn,
-.favorite-btn {
+/* Banner de Destaque */
+.banner {
+  position: relative;
+  width: 100%;
+  height: 220px;
+  background: url("https://images.unsplash.com/photo-1552566626-52f8b828add9?w=800")
+    center/cover no-fit;
+  box-shadow: inset 0 -40px 40px #000; /* Faz a foto sumir suavemente no fundo preto */
+}
+
+/* Seta de voltar idêntica às outras telas */
+.back-btn {
   position: absolute;
-  top: 20px;
-
-  width: 45px;
-  height: 45px;
-
-  border: none;
-  border-radius: 50%;
-
+  left: 15px;
+  top: 15px;
+  color: #8cff2e;
   background: rgba(0, 0, 0, 0.6);
-
-  color: #fff;
-
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-
   text-decoration: none;
+  font-size: 18px;
+  transition: transform 0.2s;
+  z-index: 5;
 }
 
-.back-btn {
-  left: 20px;
-}
-
+/* Botão Favoritar Flutuante */
 .favorite-btn {
-  right: 20px;
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  color: #8cff2e;
+  background: rgba(0, 0, 0, 0.6);
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  cursor: pointer;
+  transition: transform 0.2s;
+  z-index: 5;
 }
 
+.back-btn:hover,
+.favorite-btn:hover {
+  transform: scale(1.1);
+}
+
+/* Área de Informações */
 .content {
   padding: 20px;
 }
 
 .content h1 {
-  margin-bottom: 10px;
+  font-size: 28px;
+  font-weight: 900;
+  letter-spacing: -0.5px;
+  margin-bottom: 5px;
 }
 
+/* Avaliação e Distância */
 .rating {
   display: flex;
-  gap: 10px;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
 
-  color: #8cff2e;
+.stars-badge {
+  background: #8cff2e;
+  color: #000;
+  padding: 2px 8px;
+  border-radius: 6px;
+  font-weight: 800;
+  font-size: 13px;
+}
 
-  margin-bottom: 10px;
+.reviews-count {
+  color: #aaa;
+  font-size: 12px;
 }
 
 .distance {
+  font-size: 13px;
+  color: #ccc;
   margin-bottom: 15px;
 }
 
-.team-box {
-  background: #102313;
-
-  border: 1px solid #3f7c2d;
-
-  padding: 15px;
-
-  border-radius: 12px;
-
-  margin-bottom: 20px;
+.status-open {
+  color: #8cff2e;
+  font-weight: 700;
 }
 
-section {
+/* Caixa de Torcida Predominante */
+.team-box {
+  background: rgba(16, 35, 19, 0.5);
+  border: 1px solid #17361c;
+  padding: 12px;
+  border-radius: 12px;
+  font-size: 14px;
+  margin-bottom: 25px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.team-box i {
+  color: #8cff2e;
+  font-size: 16px;
+}
+
+/* Estilo das Seções Padrão */
+.info-section {
   margin-bottom: 25px;
 }
 
-section h2 {
+.info-section h2 {
+  font-size: 16px;
+  font-weight: 800;
+  color: #fff;
   margin-bottom: 10px;
+  border-left: 3px solid #8cff2e;
+  padding-left: 8px;
+}
+
+.info-section p {
+  font-size: 13px;
+  color: #ccc;
+  line-height: 1.5;
+}
+
+/* Seção de Transmissão ao Vivo (Nova) */
+.live-broadcast {
+  margin-bottom: 25px;
+}
+
+.live-broadcast h2 {
+  font-size: 16px;
+  font-weight: 800;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.live-broadcast h2 i {
   color: #8cff2e;
 }
 
-section p {
-  line-height: 1.6;
+.match-card {
+  background: #111;
+  border: 1px solid #17361c;
+  padding: 14px;
+  border-radius: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
+.live-tag {
+  background: #ff3b30;
+  color: #fff;
+  font-size: 9px;
+  font-weight: 900;
+  text-transform: uppercase;
+  padding: 2px 6px;
+  border-radius: 4px;
+  display: inline-block;
+  margin-bottom: 4px;
+}
+
+.match-details h3 {
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.match-details p {
+  font-size: 12px;
+  color: #aaa;
+}
+
+.neon-ball {
+  font-size: 22px;
+  color: #8cff2e;
+}
+
+.promo-box {
+  background: rgba(140, 255, 46, 0.08);
+  border: 1px dashed #8cff2e;
+  padding: 10px;
+  border-radius: 10px;
+  margin-top: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+}
+
+.promo-box i {
+  color: #8cff2e;
+}
+
+/* Comodidades (Tags) */
 .tags {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 8px;
 }
 
 .tags span {
-  background: #102313;
-
-  border: 1px solid #3f7c2d;
-
-  padding: 8px 12px;
-
+  background: #111;
+  border: 1px solid #17361c;
+  color: #eee;
+  padding: 4px 12px;
   border-radius: 20px;
+  font-size: 11px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
 }
 
+.tags span i {
+  color: #8cff2e;
+}
+
+/* Galeria de Fotos */
 .gallery {
-  display: flex;
-  gap: 10px;
-  overflow-x: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
 }
 
 .gallery img {
-  width: 140px;
-  height: 100px;
-
+  width: 100%;
+  height: 80px;
   object-fit: cover;
-
-  border-radius: 10px;
+  border-radius: 8px;
+  border: 1px solid #17361c;
 }
 
+/* Avaliações */
 .review {
-  background: #111;
-
-  border-radius: 12px;
-
-  padding: 15px;
-
-  margin-bottom: 10px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid #111;
+  padding: 12px;
+  border-radius: 10px;
+  margin-bottom: 8px;
 }
 
-.buttons {
-  display: flex;
+.review-stars {
+  font-size: 11px;
+  font-weight: 700;
+  color: #8cff2e;
+  margin-bottom: 4px;
+}
 
-  gap: 10px;
-
+/* Área do Botão de Rota Inferior */
+.buttons-area {
   margin-top: 30px;
 }
 
-.btn-favorite,
 .btn-route {
-  flex: 1;
-
-  height: 50px;
-
-  border: none;
-
-  border-radius: 12px;
-
-  font-weight: 600;
-
-  cursor: pointer;
-}
-
-.btn-favorite {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
   background: #8cff2e;
-
   color: #000;
+  text-decoration: none;
+  font-weight: 800;
+  font-size: 14px;
+  text-transform: uppercase;
+  width: 100%;
+  padding: 14px;
+  border-radius: 12px;
+  transition: transform 0.2s;
 }
 
-.btn-route {
-  background: #102313;
+.btn-route:hover {
+  transform: scale(1.02);
+}
 
+/* MENU INFERIOR FIXO (Padrão 30px) */
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #050505;
+  border-top: 1px solid #17361c;
+  display: flex;
+  justify-content: space-around;
+  padding: 12px 0;
+  z-index: 10;
+}
+
+.bottom-nav a {
+  text-decoration: none;
   color: #fff;
+  opacity: 0.5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 11px;
+}
 
-  border: 1px solid #3f7c2d;
+.bottom-nav i {
+  font-size: 30px;
+  margin-bottom: 6px;
+}
+
+.bottom-nav a:hover {
+  opacity: 1;
 }

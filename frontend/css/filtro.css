@@ -1,0 +1,246 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+/* Reset Global */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #000;
+  color: #fff;
+}
+
+.filter-page {
+  min-height: 100vh;
+  padding: 20px;
+  padding-bottom: 120px; /* Evita sobreposição dos botões e do menu inferior */
+  max-width: 480px;
+  margin: 0 auto;
+  background: #000;
+}
+
+/* Cabeçalho da página */
+.filter-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+  height: 40px;
+}
+
+.filter-header h2 {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.back-btn {
+  color: #8cff2e;
+  text-decoration: none;
+  font-size: 20px;
+  transition: transform 0.2s;
+}
+
+.clear-text {
+  color: #aaa;
+  font-size: 13px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.back-btn:hover,
+.clear-text:hover {
+  color: #8cff2e;
+  transform: scale(1.05);
+}
+
+/* Grupos de Filtros */
+.filter-container {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.filter-group h3 {
+  font-size: 14px;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: #fff;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  letter-spacing: 0.5px;
+}
+
+.filter-group h3 i {
+  color: #8cff2e;
+}
+
+/* Customização do Slider de Distância (Range) */
+.slider-container {
+  padding: 5px 5px;
+}
+
+.range-slider {
+  width: 100%;
+  -webkit-appearance: none;
+  appearance: none;
+  height: 6px;
+  border-radius: 3px;
+  background: #111;
+  border: 1px solid #17361c;
+  outline: none;
+}
+
+/* Bolinha do Slider */
+.range-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #8cff2e;
+  cursor: pointer;
+  box-shadow: 0 0 8px rgba(140, 255, 46, 0.6);
+  transition: transform 0.1s;
+}
+
+.range-slider::-webkit-slider-thumb:hover {
+  transform: scale(1.2);
+}
+
+.slider-labels {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 8px;
+  font-size: 11px;
+  color: #777;
+}
+
+.current-value {
+  color: #8cff2e;
+  font-weight: 700;
+  font-size: 12px;
+}
+
+/* Grid de Chips Customizados (Substitutos modernos de checkboxes) */
+.chips-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+/* Esconde o quadradinho padrão feio do HTML */
+.chips-grid input[type="checkbox"] {
+  display: none;
+}
+
+/* Estilo padrão do botão desmarcado */
+.chips-grid label {
+  background: rgba(16, 35, 19, 0.2);
+  border: 1px solid #111;
+  color: #ccc;
+  padding: 8px 14px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition:
+    background 0.2s,
+    border-color 0.2s,
+    color 0.2s;
+}
+
+.chips-grid label i {
+  color: #aaa;
+  font-size: 11px;
+}
+
+/* Mágica do CSS: Quando o input escondido for selecionado, o label muda de cor */
+.chips-grid input[type="checkbox"]:checked + label {
+  background: rgba(140, 255, 46, 0.12);
+  border-color: #8cff2e;
+  color: #8cff2e;
+  font-weight: 700;
+}
+
+.chips-grid input[type="checkbox"]:checked + label i {
+  color: #8cff2e;
+}
+
+/* Área de botões de rodapé */
+.action-buttons {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 12px;
+  margin-top: 15px;
+}
+
+.btn-primary,
+.btn-secondary {
+  border: none;
+  padding: 14px;
+  border-radius: 12px;
+  font-size: 13px;
+  font-weight: 800;
+  text-transform: uppercase;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  transition: transform 0.2s;
+}
+
+.btn-primary {
+  background: #8cff2e;
+  color: #000;
+}
+
+.btn-secondary {
+  background: #111;
+  border: 1px solid #17361c;
+  color: #8cff2e;
+}
+
+.btn-primary:hover,
+.btn-secondary:hover {
+  transform: translateY(-2px);
+}
+
+/* BARRA INFERIOR FIXA (Mantendo o padrão idêntico de 30px) */
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #050505;
+  border-top: 1px solid #17361c;
+  display: flex;
+  justify-content: space-around;
+  padding: 12px 0;
+  z-index: 10;
+}
+
+.bottom-nav a {
+  text-decoration: none;
+  color: #fff;
+  opacity: 0.5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 11px;
+}
+
+.bottom-nav i {
+  font-size: 30px;
+  margin-bottom: 6px;
+}
+
+.bottom-nav a:hover {
+  opacity: 1;
+}

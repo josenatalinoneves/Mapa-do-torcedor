@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mapa do Torcedor - Perfil</title>
+
+    <link rel="stylesheet" href="css/perfil.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="profile-page">
+      <!-- TOPO / CABEÇALHO DA TELA -->
+      <header class="profile-header">
+        <a href="telaInicial.html" class="back-btn">
+          <i class="fa-solid fa-arrow-left"></i>
+        </a>
+        <h2>Meu Perfil</h2>
+        <i class="fa-solid fa-gear settings-icon"></i>
+      </header>
+
+      <!-- INFORMAÇÕES DO USUÁRIO -->
+      <section class="user-card">
+        <div class="avatar-container">
+          <img
+            src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150"
+            alt="Foto do Torcedor"
+            class="user-avatar"
+          />
+          <button class="edit-avatar-btn">
+            <i class="fa-solid fa-camera"></i>
+          </button>
+        </div>
+
+        <h3>Mariana Souza</h3>
+        <p class="username">@mari_tricolor</p>
+
+        <!-- SELEÇÃO DO TIME DO CORAÇÃO -->
+        <div class="club-badge">
+          <i class="fa-solid fa-shield-halved"></i>
+          <span>Time do Coração: <strong>Bahia</strong></span>
+        </div>
+      </section>
+
+      <!-- PAINEL DE ESTATÍSTICAS (DASHBOARD COMPACTA) -->
+      <section class="stats-grid">
+        <div class="stat-item">
+          <h4>15</h4>
+          <p>Bares Visitados</p>
+        </div>
+        <div class="stat-item">
+          <h4>32</h4>
+          <p>Check-ins</p>
+        </div>
+        <div class="stat-item">
+          <h4>8</h4>
+          <p>Avaliações</p>
+        </div>
+      </section>
+
+      <!-- MENU DE OPÇÕES E CONFIGURAÇÕES -->
+      <main class="menu-options">
+        <a href="#" class="menu-item">
+          <div class="menu-item-left">
+            <i class="fa-regular fa-user"></i>
+            <span>Dados Pessoais</span>
+          </div>
+          <i class="fa-solid fa-chevron-right arrow"></i>
+        </a>
+
+        <a href="#" class="menu-item">
+          <div class="menu-item-left">
+            <i class="fa-regular fa-bell"></i>
+            <span>Notificações de Jogos</span>
+          </div>
+          <span class="badge-toggle">Ativas</span>
+        </a>
+
+        <a href="#" class="menu-item">
+          <div class="menu-item-left">
+            <i class="fa-solid fa-clock-rotate-left"></i>
+            <span>Histórico de Locais</span>
+          </div>
+          <i class="fa-solid fa-chevron-right arrow"></i>
+        </a>
+
+        <a href="#" class="menu-item">
+          <div class="menu-item-left">
+            <i class="fa-solid fa-circle-info"></i>
+            <span>Ajuda e Suporte</span>
+          </div>
+          <i class="fa-solid fa-chevron-right arrow"></i>
+        </a>
+
+        <a href="#" class="menu-item logout">
+          <div class="menu-item-left">
+            <i class="fa-solid fa-right-from-bracket"></i>
+            <span>Sair da Conta</span>
+          </div>
+        </a>
+      </main>
+
+      <!-- BARRA INFERIOR FIXA (Com Perfil Marcado como Ativo) -->
+      <nav class="bottom-nav">
+        <a href="telaInicial.html">
+          <i class="fa-solid fa-house"></i>
+          <span>Início</span>
+        </a>
+
+        <a href="mapa.html">
+          <i class="fa-solid fa-map"></i>
+          <span>Mapa</span>
+        </a>
+
+        <a href="jogos.html">
+          <i class="fa-solid fa-calendar-days"></i>
+          <span>Jogos</span>
+        </a>
+
+        <a href="favoritos.html">
+          <i class="fa-solid fa-star"></i>
+          <span>Favoritos</span>
+        </a>
+
+        <a href="perfil.html" class="active">
+          <i class="fa-solid fa-user"></i>
+          <span>Perfil</span>
+        </a>
+      </nav>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,263 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+/* Reset Global */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #000;
+  color: #fff;
+}
+
+.profile-page {
+  min-height: 100vh;
+  padding: 20px;
+  padding-bottom: 110px; /* Margem de segurança para a barra de navegação */
+  max-width: 480px;
+  margin: 0 auto;
+  background: #000;
+}
+
+/* Cabeçalho Superior */
+.profile-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  position: relative;
+  height: 40px;
+}
+
+.profile-header h2 {
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.back-btn {
+  color: #8cff2e;
+  text-decoration: none;
+  font-size: 20px;
+  transition: transform 0.2s;
+}
+
+.settings-icon {
+  color: #aaa;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.back-btn:hover,
+.settings-icon:hover {
+  transform: scale(1.1);
+  color: #8cff2e;
+}
+
+/* Bloco de Informações do Usuário */
+.user-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.avatar-container {
+  position: relative;
+  margin-bottom: 12px;
+}
+
+.user-avatar {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #8cff2e; /* Borda acesa ao redor da foto */
+}
+
+.edit-avatar-btn {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background: #8cff2e;
+  border: none;
+  color: #000;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.user-card h3 {
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.username {
+  color: #8cff2e;
+  font-size: 12px;
+  margin-bottom: 15px;
+}
+
+/* Badge do Time Escolhido */
+.club-badge {
+  background: rgba(16, 35, 19, 0.5);
+  border: 1px solid #17361c;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.club-badge i {
+  color: #8cff2e;
+}
+
+/* Painel de Estatísticas */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.stat-item {
+  background: #111;
+  border: 1px solid #17361c;
+  border-radius: 12px;
+  padding: 12px 6px;
+  text-align: center;
+}
+
+.stat-item h4 {
+  font-size: 18px;
+  font-weight: 800;
+  color: #8cff2e;
+}
+
+.stat-item p {
+  font-size: 11px;
+  color: #aaa;
+  margin-top: 2px;
+}
+
+/* Menu de Opções (Lista Estilizada) */
+.menu-options {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.menu-item {
+  background: rgba(16, 35, 19, 0.2);
+  border: 1px solid #111;
+  padding: 14px 16px;
+  border-radius: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-decoration: none;
+  color: #fff;
+  transition:
+    background 0.2s,
+    border-color 0.2s;
+}
+
+.menu-item:hover {
+  background: rgba(16, 35, 19, 0.4);
+  border-color: #17361c;
+}
+
+.menu-item-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.menu-item-left i {
+  font-size: 16px;
+  color: #8cff2e;
+  width: 20px;
+  text-align: center;
+}
+
+.arrow {
+  font-size: 12px;
+  color: #505050;
+}
+
+/* Elementos Extras do Menu */
+.badge-toggle {
+  background: #8cff2e;
+  color: #000;
+  font-size: 10px;
+  font-weight: 800;
+  padding: 2px 8px;
+  border-radius: 20px;
+  text-transform: uppercase;
+}
+
+.logout {
+  margin-top: 15px;
+  border-color: rgba(255, 59, 48, 0.2);
+}
+
+.logout i,
+.logout span {
+  color: #ff3b30; /* Tom de vermelho para o botão de sair */
+}
+
+.logout:hover {
+  background: rgba(255, 59, 48, 0.05);
+  border-color: rgba(255, 59, 48, 0.4);
+}
+
+/* BARRA INFERIOR FIXA (Mantendo o padrão idêntico de 30px) */
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #050505;
+  border-top: 1px solid #17361c;
+  display: flex;
+  justify-content: space-around;
+  padding: 12px 0;
+  z-index: 10;
+}
+
+.bottom-nav a {
+  text-decoration: none;
+  color: #fff;
+  opacity: 0.5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 11px;
+  transition:
+    opacity 0.2s ease,
+    color 0.2s ease;
+}
+
+.bottom-nav i {
+  font-size: 30px;
+  margin-bottom: 6px;
+}
+
+/* Destaque para a aba Perfil que está aberta */
+.bottom-nav .active {
+  color: #8cff2e;
+  opacity: 1;
+}

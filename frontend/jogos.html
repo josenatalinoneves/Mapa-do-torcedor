@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mapa do Torcedor - Jogos</title>
+
+    <!-- Link do CSS específico da página de Jogos -->
+    <link rel="stylesheet" href="css/jogos.css" />
+
+    <!-- Importação obrigatória do Font Awesome para os ícones -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="games-page">
+      <!-- CABEÇALHO PADRÃO DO MODELO -->
+      <header class="hero" style="position: relative">
+        <a href="telaInicial.html" class="back-btn">
+          <i class="fa-solid fa-arrow-left"></i>
+        </a>
+        <div class="logo">
+          <i
+            class="fa-solid fa-calendar-days"
+            style="color: #000; font-size: 32px"
+          ></i>
+        </div>
+        <h1>AGENDA DE <span>JOGOS</span></h1>
+        <p>Acompanhe as próximas partidas do seu time.</p>
+      </header>
+
+      <!-- LISTA DE JOGOS -->
+      <main class="games-container">
+        <!-- CARD JOGO 1 (HOJE / DESTAQUE) -->
+        <div class="game-card live-border">
+          <div class="game-header">
+            <span class="tournament">Campeonato Brasileiro</span>
+            <span class="game-date live-tag">Hoje • 21:30</span>
+          </div>
+
+          <div class="matchup">
+            <div class="team">
+              <i class="fa-solid fa-shield-halved team-icon"></i>
+              <h3>BAHIA</h3>
+            </div>
+            <div class="vs">VS</div>
+            <div class="team">
+              <i class="fa-solid fa-shield-halved team-icon opponent"></i>
+              <h3>FLAMENGO</h3>
+            </div>
+          </div>
+
+          <div class="game-footer">
+            <p class="location">
+              <i class="fa-solid fa-location-dot"></i> Arena Fonte Nova
+            </p>
+            <a href="mapa.html" class="game-action-btn">Ver Onde Assistir</a>
+          </div>
+        </div>
+
+        <!-- CARD JOGO 2 (PRÓXIMO FIM DE SEMANA) -->
+        <div class="game-card">
+          <div class="game-header">
+            <span class="tournament">Copa do Nordeste</span>
+            <span class="game-date">Dom, 21/06 • 16:00</span>
+          </div>
+
+          <div class="matchup">
+            <div class="team">
+              <i class="fa-solid fa-shield-halved team-icon opponent"></i>
+              <h3>SPORT</h3>
+            </div>
+            <div class="vs">VS</div>
+            <div class="team">
+              <i class="fa-solid fa-shield-halved team-icon"></i>
+              <h3>BAHIA</h3>
+            </div>
+          </div>
+
+          <div class="game-footer">
+            <p class="location">
+              <i class="fa-solid fa-location-dot"></i> Estádio do Ilha do Retiro
+            </p>
+            <a href="mapa.html" class="game-action-btn secondary"
+              >Ver no Mapa</a
+            >
+          </div>
+        </div>
+
+        <!-- CARD JOGO 3 (PRÓXIMO MÊS) -->
+        <div class="game-card">
+          <div class="game-header">
+            <span class="tournament">Campeonato Brasileiro</span>
+            <span class="game-date">Qua, 24/06 • 19:00</span>
+          </div>
+
+          <div class="matchup">
+            <div class="team">
+              <i class="fa-solid fa-shield-halved team-icon"></i>
+              <h3>BAHIA</h3>
+            </div>
+            <div class="vs">VS</div>
+            <div class="team">
+              <i class="fa-solid fa-shield-halved team-icon opponent"></i>
+              <h3>VITÓRIA</h3>
+            </div>
+          </div>
+
+          <div class="game-footer">
+            <p class="location">
+              <i class="fa-solid fa-location-dot"></i> Arena Fonte Nova
+            </p>
+            <a href="mapa.html" class="game-action-btn secondary"
+              >Ver no Mapa</a
+            >
+          </div>
+        </div>
+      </main>
+
+      <!-- BARRA INFERIOR COM JOGOS ATIVO -->
+      <nav class="bottom-nav">
+        <a href="telaInicial.html">
+          <i class="fa-solid fa-house"></i>
+          <span>Início</span>
+        </a>
+
+        <a href="mapa.html">
+          <i class="fa-solid fa-map"></i>
+          <span>Mapa</span>
+        </a>
+
+        <a href="jogos.html" class="active">
+          <i class="fa-solid fa-calendar-days"></i>
+          <span>Jogos</span>
+        </a>
+
+        <a href="favoritos.html">
+          <i class="fa-solid fa-star"></i>
+          <span>Favoritos</span>
+        </a>
+
+        <a href="perfil.html">
+          <i class="fa-solid fa-user"></i>
+          <span>Perfil</span>
+        </a>
+      </nav>
+    </div>
+  </body>
+</html>

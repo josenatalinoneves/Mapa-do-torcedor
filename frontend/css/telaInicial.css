@@ -267,3 +267,147 @@ body {
 .place-card:visited {
   color: #fff;
 }
+/* Container do painel central */
+/* ======================================================== */
+/* NOVA VERSÃO: CARDS LADO A LADO (3 COLUNAS)               */
+/* ======================================================== */
+
+/* Container alterado para GRID com 3 colunas iguais */
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(
+    3,
+    1fr
+  ); /* Divide o espaço em 3 partes iguais */
+  gap: 10px; /* Espaço menor entre eles para caber em qualquer celular */
+  padding: 0 20px;
+  max-width: 480px;
+  margin: 15px auto;
+}
+
+/* Cards agora organizados "em pé" (vertical) */
+.dash-card {
+  background: rgba(16, 35, 19, 0.4);
+  border: 1px solid #17361c;
+  border-radius: 15px;
+  padding: 12px 4px;
+  display: flex;
+  flex-direction: column; /* Alinha o ícone em cima e o texto embaixo */
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  text-decoration: none;
+  position: relative;
+  transition:
+    border-color 0.2s ease,
+    transform 0.2s ease;
+  min-height: 105px; /* Garante que todos os 3 cards tenham exatamente a mesma altura */
+}
+
+.dash-card:hover {
+  border-color: #8cff2e;
+  transform: translateY(-2px);
+}
+
+/* Ajuste do tamanho do círculo do ícone */
+.dash-icon {
+  font-size: 20px;
+  color: #8cff2e;
+  background: #111;
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #17361c;
+  margin-bottom: 6px; /* Empurra o texto para baixo */
+}
+
+/* Título menor para caber na coluna */
+.dash-info h3 {
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+/* ATENÇÃO: Ocultamos o parágrafo <p> para o texto longo não esmagar o layout */
+.dash-info p {
+  display: none;
+}
+
+/* Ajuste da etiqueta "Live" para o canto superior do card menor */
+.badge {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  background: #8cff2e;
+  color: #000;
+  font-size: 8px;
+  font-weight: 900;
+  text-transform: uppercase;
+  padding: 1px 4px;
+  border-radius: 3px;
+}
+/* ======================================================== */
+/* SEÇÃO DE ATALHOS EM GRID (3 COLUNAS)                     */
+/* ======================================================== */
+
+.quick-actions-grid {
+  display: grid;
+  grid-template-columns: repeat(
+    3,
+    1fr
+  ); /* Divide o espaço em 3 colunas idênticas */
+  gap: 10px; /* Espaçamento entre os cards */
+  margin: 10px auto 25px auto;
+  width: 100%;
+  max-width: 480px;
+  padding: 0 20px;
+}
+
+/* Estilo base de cada Card de Atalho */
+.action-card {
+  background: #111;
+  border: 1px solid #17361c;
+  border-radius: 12px;
+  padding: 12px 6px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  text-decoration: none;
+  color: #fff;
+  text-align: center;
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease,
+    background 0.2s ease;
+}
+
+/* Ícones dos Cards */
+.action-card i {
+  font-size: 20px;
+  color: #8cff2e; /* Seu verde neon oficial */
+}
+
+/* Texto dos Cards */
+.action-card span {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: -0.2px;
+}
+
+/* Efeito ao passar o mouse ou tocar no celular */
+.action-card:hover {
+  transform: translateY(-2px);
+  border-color: #8cff2e;
+  background: rgba(16, 35, 19, 0.3);
+}
+
+/* Detalhe visual exclusivo para o card de Filtro se destacar sutilmente */
+.filter-highlight {
+  border-color: rgba(140, 255, 46, 0.3);
+}
