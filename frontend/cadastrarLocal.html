@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cadastrar Local</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link rel="stylesheet" href="css/telaInicial.css" />
+    <style>
+      .form-page { padding: 20px; padding-bottom: 100px; }
+      .form-title { text-align: center; margin: 20px 0 30px; font-size: 24px; font-weight: 900; }
+      .form-title span { color: #8cff2e; }
+      .form-group { margin-bottom: 16px; }
+      .form-group label { display: block; margin-bottom: 6px; font-size: 13px; color: #aaa; }
+      .form-group input, .form-group select {
+        width: 100%; padding: 12px 16px; border-radius: 10px;
+        border: 1px solid #3f7c2d; background: #102313;
+        color: #fff; font-size: 14px; outline: none;
+      }
+      .btn-cadastrar {
+        width: 100%; padding: 14px; background: #8cff2e;
+        color: #000; border: none; border-radius: 12px;
+        font-size: 15px; font-weight: 800; cursor: pointer;
+        margin-top: 10px;
+      }
+      .mensagem { text-align: center; margin-top: 16px; font-size: 14px; }
+    </style>
+  </head>
+  <body>
+    <div class="app" style="min-height: 100vh; padding: 20px; padding-bottom: 100px;">
+      <div class="form-title">CADASTRAR <span>LOCAL</span></div>
+
+      <div class="form-group">
+        <label>Nome do local</label>
+        <input type="text" id="nome" placeholder="Ex: Bar do Torcedor" />
+      </div>
+
+      <div class="form-group">
+        <label>Endereço</label>
+        <input type="text" id="endereco" placeholder="Ex: Rua das Palmeiras, 45" />
+      </div>
+
+      <div class="form-group">
+        <label>Tipo</label>
+        <select id="tipo">
+          <option value="bar">Bar</option>
+          <option value="restaurante">Restaurante</option>
+          <option value="fan_fest">Fan Fest</option>
+          <option value="outro">Outro</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Torcida predominante</label>
+        <input type="text" id="torcida" placeholder="Ex: Flamengo" />
+      </div>
+
+      <div class="form-group">
+        <label>Horário de abertura</label>
+        <input type="time" id="abertura" />
+      </div>
+
+      <div class="form-group">
+        <label>Horário de fechamento</label>
+        <input type="time" id="fechamento" />
+      </div>
+
+      <button class="btn-cadastrar" onclick="cadastrar()">
+        <i class="fa-solid fa-plus"></i> Cadastrar Local
+      </button>
+
+      <div class="mensagem" id="mensagem"></div>
+    </div>
+
+    <nav class="bottom-nav">
+      <a href="telaInicial.html"><i class="fa-solid fa-house"></i><span>Início</span></a>
+      <a href="mapa.html"><i class="fa-solid fa-map"></i><span>Mapa</span></a>
+      <a href="jogos.html"><i class="fa-solid fa-calendar-days"></i><span>Jogos</span></a>
+      <a href="favoritos.html"><i class="fa-solid fa-star"></i><span>Favoritos</span></a>
+      <a href="perfil.html"><i class="fa-solid fa-user"></i><span>Perfil</span></a>
+    </nav>
+
+    <script>
+      function cadastrar() {
+        const dados = {
+          nome: document.getElementById('nome').value,
+          endereco: document.getElementById('endereco').value,
+          tipo: document.getElementById('tipo').value,
+          torcida: document.getElementById('torcida').value,
+          abertura: document.getElementById('abertura').value,
+          fechamento: document.getElementById('fechamento').value,
+        };
+
+        fetch('http://localhost/mapa-do-torcedor/api/cadastrar.php', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(dados)
+        })
+        .then(res => res.json())
+        .then(data => {
+          document.getElementById('mensagem').style.color = '#8cff2e';
+          document.getElementById('mensagem').innerText = 'Local cadastrado com sucesso!';
+        })
+        .catch(() => {
+          document.getElementById('mensagem').style.color = 'red';
+          document.getElementById('mensagem').innerText = 'Erro ao cadastrar.';
+        });
+      }
+    </script>
+  </body>
+</html>
