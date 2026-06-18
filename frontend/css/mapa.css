@@ -1,6 +1,12 @@
 /* Importação da Fonte de acordo com o modelo */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700;900&display=swap");
-
+:root {
+  --primary: #8cff2e;
+  --dark: #000;
+  --card: #102313;
+  --border: #3f7c2d;
+  --text: #fff;
+}
 /* Configurações Globais unificadas */
 * {
   margin: 0;
@@ -239,4 +245,25 @@ body {
 /* Efeito sutil de clique/hover */
 .back-btn:hover {
   transform: scale(1.1);
+}
+button {
+  transition: 0.3s;
+}
+
+button:hover {
+  opacity: 0.9;
+  transform: scale(1.03);
+}
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 30px;
+  }
+
+  .quick-menu {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.cta-card {
+  text-decoration: none;
+  color: inherit;
 }

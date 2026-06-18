@@ -1,83 +1,144 @@
-<!doctype html>
-<html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mapa do Torcedor - Favoritos</title>
-    
-    <link rel="stylesheet" href="css/favoritos.css" />
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
-  </head>
-  <body>
-    <div class="favorites-page">
-      
-      <header class="hero" style="position: relative">
-        <a href="telaInicial.html" class="back-btn">
-          <i class="fa-solid fa-arrow-left"></i>
-        </a>
-        <div class="logo">
-          <i class="fa-solid fa-star" style="color: #000; font-size: 32px;"></i>
-        </div>
-        <h1>SEUS <span>FAVORITOS</span></h1>
-        <p>Os seus lugares e torcidas guardados.</p>
-      </header>
 
-      <main class="favorites-container">
-        
-        <div class="favorite-card">
-          <div class="card-status">Aberto</div>
-          <div class="card-info">
-            <div class="card-icon-area">
-              <i class="fa-solid fa-beer-mug-empty"></i>
-            </div>
-            <div class="card-text">
-              <h3>Bar do Torcedor Oficial</h3>
-              <p><i class="fa-solid fa-location-dot"></i> Av. dos Esportes, 1050</p>
-              <span class="category">Ponto de Encontro</span>
-            </div>
+      <!doctype html>
+      <html lang="pt-BR">
+        <head>
+          <meta charset="UTF-8" />
+          <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+          />
+          <title>Mapa do Torcedor - Favoritos</title>
+
+          <link rel="stylesheet" href="css/favoritos.css" />
+
+          <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+          />
+        </head>
+        <body>
+          <div class="favorites-page">
+            <header class="hero" style="position: relative">
+              <a href="telaInicial.html" class="back-btn">
+                <i class="fa-solid fa-arrow-left"></i>
+              </a>
+              <div class="logo">
+                <i
+                  class="fa-solid fa-star"
+                  style="color: #000; font-size: 32px"
+                ></i>
+              </div>
+              <h1>SEUS <span>FAVORITOS</span></h1>
+              <p>Os seus lugares e torcidas guardados.</p>
+            </header>
+            <main class="favorites-container">
+              <!-- CARD 1 -->
+              <a href="detalheLocal.html" class="favorite-card">
+                <div class="card-status">Aberto</div>
+
+                <div class="card-info">
+                  <div class="card-icon-area">
+                    <i class="fa-solid fa-beer-mug-empty"></i>
+                  </div>
+
+                  <div class="card-text">
+                    <h3>Bar do Torcedor Oficial</h3>
+
+                    <p>
+                      <i class="fa-solid fa-location-dot"></i>
+                      Av. dos Esportes, 1050
+                    </p>
+
+                    <span class="category">Ponto de Encontro</span>
+                  </div>
+                </div>
+
+                <button class="remove-favorite-btn">
+                  <i class="fa-solid fa-star"></i>
+                </button>
+              </a>
+
+              <!-- CARD 2 -->
+              <a href="detalheLocal.html" class="favorite-card">
+                <div class="card-status">Dia de Jogo</div>
+
+                <div class="card-info">
+                  <div class="card-icon-area">
+                    <i class="fa-solid fa-futbol"></i>
+                  </div>
+
+                  <div class="card-text">
+                    <h3>Arena Central da Torcida</h3>
+
+                    <p>
+                      <i class="fa-solid fa-location-dot"></i>
+                      Rua Palestra Itália, 200
+                    </p>
+
+                    <span class="category">Estádio</span>
+                  </div>
+                </div>
+
+                <button class="remove-favorite-btn">
+                  <i class="fa-solid fa-star"></i>
+                </button>
+              </a>
+
+              <!-- CARD 3 -->
+              <a href="detalheLocal.html" class="favorite-card">
+                <div class="card-status closed">Fechado</div>
+
+                <div class="card-info">
+                  <div class="card-icon-area">
+                    <i class="fa-solid fa-shirt"></i>
+                  </div>
+
+                  <div class="card-text">
+                    <h3>Sede Organizada e Loja</h3>
+
+                    <p>
+                      <i class="fa-solid fa-location-dot"></i>
+                      Al. dos Campeões, 77
+                    </p>
+
+                    <span class="category">Sede Social</span>
+                  </div>
+                </div>
+
+                <button class="remove-favorite-btn">
+                  <i class="fa-solid fa-star"></i>
+                </button>
+              </a>
+            </main>
+            <nav class="bottom-nav">
+              <a href="telaInicial.html">
+                <i class="fa-solid fa-house"></i>
+                <span>Início</span>
+              </a>
+
+              <a href="mapa.html">
+                <i class="fa-solid fa-map"></i>
+                <span>Mapa</span>
+              </a>
+
+              <a href="jogos.html">
+                <i class="fa-solid fa-calendar-days"></i>
+                <span>Jogos</span>
+              </a>
+
+              <a href="favoritos.html" class="active">
+                <i class="fa-solid fa-star"></i>
+                <span>Favoritos</span>
+              </a>
+
+              <a href="perfil.html">
+                <i class="fa-solid fa-user"></i>
+                <span>Perfil</span>
+              </a>
+            </nav>
           </div>
-          <button class="remove-favorite-btn" title="Remover dos favoritos">
-            <i class="fa-solid fa-star"></i>
-          </button>
-        </div>
-
-        <div class="favorite-card">
-          <div class="card-status">Dia de Jogo</div>
-          <div class="card-info">
-            <div class="card-icon-area">
-              <i class="fa-solid fa-stadium"></i>
-              <i class="fa-solid fa-mound"></i>
-            </div>
-            <div class="card-text">
-              <h3>Arena Central da Torcida</h3>
-              <p><i class="fa-solid fa-location-dot"></i> Rua Palestra Itália, 200</p>
-              <span class="category">Estádio</span>
-            </div>
-          </div>
-          <button class="remove-favorite-btn" title="Remover dos favoritos">
-            <i class="fa-solid fa-star"></i>
-          </button>
-        </div>
-
-        <div class="favorite-card">
-          <div class="card-status closed">Fechado</div>
-          <div class="card-info">
-            <div class="card-icon-area">
-              <i class="fa-solid fa-shirt"></i>
-            </div>
-            <div class="card-text">
-              <h3>Sede Organizada e Loja</h3>
-              <p><i class="fa-solid fa-location-dot"></i> Al. dos Campeões, 77</p>
-              <span class="category">Sede Social</span>
-            </div>
-          </div>
-          <button class="remove-favorite-btn" title="Remover dos favoritos">
-            <i class="fa-solid fa-star"></i>
-          </button>
-        </div>
-
-      </main>
+        </body>
+      </html>
 
       <nav class="bottom-nav">
         <a href="telaInicial.html">
@@ -105,7 +166,6 @@
           <span>Perfil</span>
         </a>
       </nav>
-      
     </div>
   </body>
 </html>

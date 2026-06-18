@@ -1,6 +1,12 @@
 /* Importação da Fonte oficial do modelo */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700;900&display=swap");
-
+:root {
+  --primary: #8cff2e;
+  --dark: #000;
+  --card: #102313;
+  --border: #3f7c2d;
+  --text: #fff;
+}
 /* Reset Global */
 * {
   margin: 0;
@@ -165,12 +171,12 @@ body {
   right: 16px;
   font-size: 10px;
   font-weight: 700;
-  color: #8cff2e; /* Aberto/Ativo fica verde */
+  color: #eaede7; /* Aberto/Ativo fica verde */
   text-transform: uppercase;
 }
 
 .card-status.closed {
-  color: #ff3b3b; /* Fechado fica vermelho */
+  color: #ffffff; /* Fechado fica vermelho */
 }
 
 /* Botão da Estrela de Favorito (Ativa) */
@@ -226,4 +232,32 @@ body {
 .bottom-nav .active {
   color: #8cff2e; /* Acende o texto em verde neon */
   opacity: 1; /* Tira a opacidade deixando o ícone 100% aceso */
+}
+button {
+  transition: 0.3s;
+}
+
+button:hover {
+  opacity: 0.9;
+  transform: scale(1.03);
+}
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 30px;
+  }
+
+  .quick-menu {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.card-status {
+  background: #1f8f3a;
+}
+
+.closed {
+  background: #d13a3a;
+}
+.favorite-card {
+  text-decoration: none;
+  color: inherit;
 }

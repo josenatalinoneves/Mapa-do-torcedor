@@ -1,5 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
-
+:root {
+  --primary: #8cff2e;
+  --dark: #000;
+  --card: #102313;
+  --border: #3f7c2d;
+  --text: #fff;
+}
 /* Reset e Configurações Gerais */
 * {
   margin: 0;
@@ -308,7 +314,9 @@ body {
 .btn-route:hover {
   transform: scale(1.02);
 }
-
+.bottom-nav .active {
+  color: #8cff2e;
+}
 /* MENU INFERIOR FIXO (Padrão 30px) */
 .bottom-nav {
   position: fixed;
@@ -340,4 +348,13 @@ body {
 
 .bottom-nav a:hover {
   opacity: 1;
+}
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 30px;
+  }
+
+  .quick-menu {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }

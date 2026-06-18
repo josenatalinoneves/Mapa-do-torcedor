@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="pt-BR">
   <head>
+    <link rel="icon" href="favicon.ico" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mapa do Torcedor - Detalhes do Local</title>
@@ -15,12 +16,16 @@
     <div class="container">
       <!-- BANNER COM FOTO DE FUNDO (Ajustado via CSS) -->
       <div class="banner">
+        <a href="notificacoes.html" class="notification-link">
+          <i class="fa-regular fa-bell"></i>
+        </a>
         <!-- Seta de voltar padronizada -->
         <a href="telaInicial.html" class="back-btn">
           <i class="fa-solid fa-arrow-left"></i>
         </a>
-
+        <a href="telaInicial.html" class="active"></a>
         <!-- Botão de favoritar flutuante moderno -->
+        <button class="favorite-btn" id="favoriteBtn"></button>
         <button class="favorite-btn" title="Favoritar local">
           <i class="fa-regular fa-star"></i>
         </button>
@@ -120,7 +125,7 @@
         <section class="info-section">
           <h2>💬 Avaliações</h2>
           <div class="review">
-            <div class="review-stars">⭐⭐⭐⭐ Tirando onda</div>
+            <div class="review-stars">⭐⭐⭐⭐⭐ Tirando onda</div>
             <p>Melhor lugar para assistir aos jogos do Bahia.</p>
           </div>
 
@@ -132,7 +137,11 @@
 
         <!-- BOTÃO DE AÇÃO PRINCIPAL (Focado em rota) -->
         <div class="buttons-area">
-          <a href="https://maps.google.com" target="_blank" class="btn-route">
+          <a
+            href="https://www.google.com/maps/search/?api=1&query=Av+ACM+1200+Salvador+BA"
+            target="_blank"
+            class="btn-route"
+          >
             <i class="fa-solid fa-route"></i> Como Chegar (Abrir Rota)
           </a>
         </div>

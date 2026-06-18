@@ -1,3 +1,10 @@
+:root {
+  --primary: #8cff2e;
+  --dark: #000;
+  --card: #102313;
+  --border: #3f7c2d;
+  --text: #fff;
+}
 * {
   margin: 0;
   padding: 0;
@@ -108,7 +115,7 @@ body {
 }
 
 .menu-card {
-  background: #102313;
+  background: var(--card);
   border: 1px solid #3f7c2d;
   border-radius: 12px;
   padding: 12px 5px;
@@ -147,7 +154,7 @@ body {
 
 .place-card {
   min-width: 180px;
-  background: #102313;
+  background: var(--card);
   border-radius: 12px;
   overflow: hidden;
   border: 1px solid #2d5723;
@@ -239,6 +246,11 @@ body {
 .bottom-nav .active {
   color: #8cff2e;
 }
+
+.bottom-nav .active i {
+  transform: scale(1.15);
+}
+
 .map-page {
   min-height: 100vh;
   background: #000;
@@ -410,4 +422,41 @@ body {
 /* Detalhe visual exclusivo para o card de Filtro se destacar sutilmente */
 .filter-highlight {
   border-color: rgba(140, 255, 46, 0.3);
+}
+.place-card {
+  animation: fadeIn 0.5s ease;
+  transition: 0.3s;
+}
+
+.place-card:hover {
+  transform: translateY(-5px);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+button {
+  transition: 0.3s;
+}
+
+button:hover {
+  opacity: 0.9;
+  transform: scale(1.03);
+}
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 30px;
+  }
+
+  .quick-menu {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
